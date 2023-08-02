@@ -1,1 +1,24 @@
+#include <iostream>
 
+using namespace std;
+
+int main(){
+    int x;
+    cin >> x;
+    if(x>74){
+        cout << "First";
+    }
+    else if(x>69){
+        cout << "Upper second";
+    }
+    else if(x>59){
+        cout << "Lower second";
+    }
+    else if(x>49){
+        cout << "Third";
+    }
+    else{
+        cout << "Fail";
+    }
+    return 0;
+}
