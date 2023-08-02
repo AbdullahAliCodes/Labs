@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+int getVowelCount(const std::string& str) {
+    int vowelCount = 0;
+    for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
+        switch (tolower(*it)) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                vowelCount++;
+                break;
+        }
+    }
+    return vowelCount;
+}
+
+int main() {
+    std::vector<int> counts;
+    std::string line;
+
+    while (std::getline(std::cin, line) && line != "end") {
+        int vowelCount = getVowelCount(line);
+        counts.push_back(vowelCount);
+    }
+
+    for (std::vector<int>::iterator it = counts.begin(); it != counts.end(); ++it) {
+        std::cout << *it << '\n';
+    }
+
+    return 0;
+}
