@@ -1,0 +1,1 @@
+SELECT * FROM student WHERE student_fname LIKE '%e%' AND student_lname LIKE '%a%';

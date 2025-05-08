@@ -1,0 +1,1 @@
+RENAME TABLE customer TO new_customer;

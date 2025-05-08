@@ -1,0 +1,1 @@
+insert into students (student_num , age) values ('54', 7);

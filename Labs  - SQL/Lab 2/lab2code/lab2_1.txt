@@ -1,0 +1,1 @@
+create table customer( customer_id char(3), customer_lname varchar(25), customer_fname varchar(25));

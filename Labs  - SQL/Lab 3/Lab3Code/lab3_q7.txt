@@ -1,0 +1,1 @@
+UPDATE students set student_fname="Mark" WHERE student_num="104";
