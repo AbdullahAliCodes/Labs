@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+string x;
+string y;
+int main(){
+    cin >> x;
+    cin >> y;
+    if (x == y){
+        cout << "Tie";
+    }
+    else if (x == "rock" && y == "scissors"){
+        cout << "Player 1 wins";
+    }
+    else if (x == "scissors" && y == "paper"){
+        cout << "Player 1 wins";
+    }
+    else if  (x == "paper" && y == "rock"){
+        cout << "Player 1 wins";
+    }
+    else{
+        cout << "Player 2 wins";
+    }
+    return 0;
+}

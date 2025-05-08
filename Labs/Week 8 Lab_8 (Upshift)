@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+std::string modifyString(const std::string& input) {
+    std::string modifiedStr;
+    
+    for (int i = 0; i < input.length(); i++) {
+        modifiedStr += static_cast<char>(static_cast<int>(input[i]) + 1);
+    }
+    
+    return modifiedStr;
+}
+
+int main() {
+    std::string userInput;
+    
+    std::cin >> userInput;
+    
+    std::string modifieduserInput = modifyString(userInput);
+    
+    std::cout << modifieduserInput << std::endl;
+    
+    return 0;
+}

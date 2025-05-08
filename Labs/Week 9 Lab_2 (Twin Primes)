@@ -1,0 +1,61 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+bool isPrime(int N) {
+    if (N > 1) {
+        int endpoint = sqrt(N) + 1;
+        for (int i = 2; i <= endpoint; i++) {
+            if (N % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
+	/*
+	Complete the missing code here
+	The function takes in an integer and returns true
+	if it is prime. Otherwise, it returns false
+	*/
+
+
+bool isTwinPrime(int N){
+	bool lower = isPrime(N-2);
+	bool upper = isPrime(N+2);
+	bool num = isPrime(N);
+	if(num == true && lower == true){
+		return true;
+	}
+	if(num == true && upper == true){
+		return true;
+	}
+	else{
+		return false;
+	}
+	/*
+	Complete the missing code. The function takes in 
+	an integer and returns true if it is a twin prime.
+	Otherwise, it returns false. The function should
+	make use of the isPrime() function in some way
+	*/
+}
+
+int main(){
+	int N;
+	cin >> N;
+	for (int i = 0; i < N; ++i){
+		int p;
+		cin >> p;
+		if (isTwinPrime(p)){
+			cout << "true" << endl;
+		}
+		else{
+			cout << "false" << endl;
+		}
+	}
+	return 0;
+}
